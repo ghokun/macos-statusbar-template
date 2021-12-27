@@ -4,7 +4,7 @@
 //
 //  Created by Gokhun on 12/27/21.
 //
-import Cocoa
+import AppKit
 import SwiftUI
 
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -46,7 +46,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		// Keeps window reference active, we need to use this when using NSHostingView
 		hello.isReleasedWhenClosed = false
 
-		// Lets us use SwiftUI viws with AppKit
+		// NSHostingView lets us use SwiftUI views with AppKit
 		hello.contentView = NSHostingView(rootView: HelloView())
 
 		// Center and bring forward
